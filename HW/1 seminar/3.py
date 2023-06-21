@@ -29,6 +29,6 @@ def check_luck(ticket):
 
 ticket = input("Введите номер вашего билета: ")
 if len(ticket) != 6:
-    print("!!! ALARM !!!\nОшибка, наши билеты содержат только 6 цифар")
+    print("!!! ALARM !!!\nОшибка 666: наши билеты содержат только 6 цифар")
 else:
     check_luck(ticket)

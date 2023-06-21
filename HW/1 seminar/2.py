@@ -12,6 +12,8 @@
 60 -> 10  40  10
 '''
 
+
+
 def count_birds(birds):
     Kate = int(birds * 0.67)
     PetrAndSerj = (int(birds * 0.335))//2
@@ -19,7 +21,9 @@ def count_birds(birds):
     if dif == 0:
         print(f'{birds} -> {PetrAndSerj} {Kate} {PetrAndSerj}')
     else:
-        print(f'{birds} -> {PetrAndSerj} {Kate} {PetrAndSerj} \nКатя сделала за лентяев еще {dif} Журавливков')
+        print(f'{birds} -> {PetrAndSerj} {Kate} {PetrAndSerj} \nКатя сделала за лентяев еще {dif} Журавликов')
 
 birds = int(input("Сколько Журавликов сделано?\n"))
 count_birds(birds)
+
+

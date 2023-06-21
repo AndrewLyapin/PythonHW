@@ -11,21 +11,24 @@
 
 def broke(rows, col):
     slice = int(input("Сколько долек нужно?\n"))
-    if rows*col == 0:
-        print("Такой шоколадки быть не может")
-    elif slice <= rows * col:
-        if slice % col == 0 or slice % rows == 0:
-            print(f'{rows} {col} {slice} -> yes')
+    if slice > 0:
+        if rows*col <= 0:
+            print("Такой шоколадки быть не может")
+        elif slice <= rows * col:
+            if slice % col == 0 or slice % rows == 0:
+                print(f'{rows} {col} {slice} -> yes')
+            else:
+                print(f'{rows} {col} {slice} -> no')
         else:
-            print(f'{rows} {col} {slice} -> no')
+            print("Столько долек там нет")
     else:
-        print("Столько долек там нет")
+        print("Вы хотите приклеить дольки к шоколаду?)")
 
 rows = int(input("Сколько долек по ширине?\n"))
 
-if rows != 0:
+if rows > 0:
     col = int(input("Сколько долек по длине?\n"))
-    if col != 0:
+    if col > 0:
         broke(rows, col)
     else:
         print("Такой шоколадки быть не может")
