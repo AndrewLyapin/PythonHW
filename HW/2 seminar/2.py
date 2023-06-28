@@ -11,7 +11,6 @@ def count_nums(summa, prod):
         X = (summa + math.sqrt(disc))//2
         Y = (summa - math.sqrt(disc))//2
         print((X),(Y))
-        return int(X),int(Y)
     else:
         print("Неправильные значения!")
 
