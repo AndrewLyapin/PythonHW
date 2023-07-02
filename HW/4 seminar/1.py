@@ -7,6 +7,6 @@ m — кол-во элементов второго множества. Зате
 
 from random import randint
 
-print(lst_1 := [randint(-99, 100) for _ in range(int(input("Сколько элементов должно быть в первом множестве?\n")))])
-print(lst_2 := [randint(-99, 100) for _ in range(int(input("Сколько элементов должно быть во втором множестве?\n")))])
-print(sorted(set(lst_1+lst_2)))
+print(lst_1 := [randint(0, 10) for _ in range(int(input("Сколько элементов должно быть в первом множестве?\n")))])
+print(lst_2 := [randint(0, 10) for _ in range(int(input("Сколько элементов должно быть во втором множестве?\n")))])
+print(list(set(lst_1) & set(lst_2)))

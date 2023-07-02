@@ -4,8 +4,11 @@
 Пример:
 '''
 
-list_1 = [1, 12, 6, 7, 8, 15]
-k = 11
+
+from random import randint
+
+print(list_1 := [randint(0, 10) for _ in range(int(input("Сколько элементов должно быть в первом множестве?\n")))])
+k = int(input("К  какому числу нужно найти ближайший элемент?\n"))
 # 5
 
 lst_dif = []
