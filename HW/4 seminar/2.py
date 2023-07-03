@@ -14,9 +14,9 @@
 
 from random import randint
 
-print(bushs := [randint(1,9) for _ in range(int(input("Сколько элементов должно быть в первом множестве?\n")))])
+print(bushs := [randint(1,9) for _ in range(int(input("Сколько кустов?\n")))])
 harvest = 0
-for berry in range(1,len(bushs) - 1):
-    if harvest < (bushs[berry - 1] + bushs[berry] + bushs[berry + 1]):
-        harvest = bushs[berry - 1] + bushs[berry] + bushs[berry + 1]
+for berry in range(len(bushs) - 1):
+    if harvest < (bushs[berry - 2] + bushs[berry - 1] + bushs[berry]):
+        harvest = bushs[berry - 2] + bushs[berry - 1] + bushs[berry]
 print(harvest)
