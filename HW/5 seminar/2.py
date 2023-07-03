@@ -11,4 +11,4 @@
 def sum_nums(a, b):
     return b if a == 0 else sum_nums(a-1, b+1)
 
-print(sum_nums(a = int(input("Введите первое число: ")), b = int(input("Введите второе число: "))))
+print(sum_nums(a = int(input("Введите первое неотрицательное число: ")), b = int(input("Введите второе число: "))))
