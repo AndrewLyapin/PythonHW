@@ -13,7 +13,7 @@ def add_contact(name, number):
         book_dict[name] = number
         file.write(f'{name}: {number}\n')
     print(f'Контакт {name} с номером {number} успешно добавлен в телефонный справочник!')
-    return book_dict
+    return read_phonebook()
 
 
 def find_contact(name):
@@ -100,20 +100,21 @@ def check_action(num):
             read_phonebook()
             check_action(int(input(choice_func)))
         case 2:
-            add_contact(input('Как зовут контакт?\n'), input('Какой номер?\n'))
+            add_contact(input('Как зовут контакт?\n').upper(), input('Какой номер?\n'))
             check_action(int(input(choice_func)))
         case 3:
-            print(find_contact(input("Введите имя: ")))
+            find_contact(input("Введите имя: ").upper())
             check_action(int(input(choice_func)))
         case 4:
             read_phonebook()
-            change_contact(input("Какой контакт изменить?\n"))
+            change_contact(input("Какой контакт изменить?\n").upper())
             check_action(int(input(choice_func)))
         case 5:
-            delete_contact(input("Какой контакт удалить?  "))
+            read_phonebook()
+            delete_contact(input("Какой контакт удалить?  ").upper())
             check_action(int(input(choice_func)))
         case 6:
             exit()
 
-choice_func = "Выбрать действие:\nПоказать все контакты - 1. \nДобавить новый контакт - 2.\nУдалить контакт - 5.\nНайти контакт - 3.\nИзменить контакт - 4. \nВыйти - 6.\n "
+choice_func = "\n\n\nВыбрать действие:\nПоказать все контакты - 1. \nДобавить новый контакт - 2.\nУдалить контакт - 5.\nНайти контакт - 3.\nИзменить контакт - 4. \nВыйти - 6.\n "
 check_action(int(input("К вашим услугам телефонный справочник.\nПоказать все контакты - 1. \nДобавить новый контакт - 2.\nУдалить контакт - 5.\nНайти контакт - 3.\nИзменить контакт - 4. \nВыйти - 6.\n ")))
