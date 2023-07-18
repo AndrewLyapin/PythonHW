@@ -39,5 +39,11 @@ def start():
                 name = model.delete_contact(uid)
                 view.print_msg(text.contact_deleted(name))
             case 8:
+                if model.phone_book != model.original_phone_book:
+                    view.input_data(text.save_changes)
+                    answer = view.input_data(text.save_changes)
+                    if answer == 'y':
+                        model.save_file()
+                        view.print_msg(text.save_sucessful)
                 view.print_msg(text.good_bye)
                 break

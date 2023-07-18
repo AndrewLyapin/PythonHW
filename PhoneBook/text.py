@@ -35,3 +35,5 @@ def rename_sucessful(name):
     return f"Контакт {name} успешно изменен!"
 
 good_bye = 'Хлоп!'
+
+save_changes = "Сохранить изменения перед выходом? (у/n)"

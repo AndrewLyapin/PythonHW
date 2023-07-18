@@ -1,6 +1,8 @@
+from copy import deepcopy
+
 phone_book = {}
 path = 'Phones.txt'
-
+original_phone_book = {}
 
 def open_file():
     with open(path, 'r', encoding='UTF-8') as file:
@@ -8,7 +10,7 @@ def open_file():
     for contact in data:
         uid, name, phone, comment = contact.strip().split(';')
         phone_book[int(uid)] = [name, phone, comment]
-
+    original_phone_book = deepcopy(phone_book)
 
 
 def input_contact(new: list[str]) -> str:
